@@ -13,16 +13,16 @@
     <link rel="stylesheet" href="style.css" />
     <title>Advice Generator App</title>
   </head>
-  <body class="h-screen w-full bg-neutral-darkBlue flex flex-col justify-center">
+  <body class="h-screen p-6 mx-auto w-full bg-neutral-darkBlue flex flex-col justify-center">
     <div
-      class="advice-slip | relative p-8 text-center rounded-xl h-auto min-h-56 max-w-96 mx-auto bg-neutral-darkGrayishBlue"
+      class="advice-slip | relative p-8 m-8 text-center rounded-xl h-auto min-h-56 max-w-96 mx-auto bg-neutral-darkGrayishBlue"
     >
       <div class="container">
         <h3 class="text-primary-neonGreen font-manrope uppercase text-xs tracking-widest">
-          Advice #117
+          Advice #<span id="adviceNumber">117</span>
         </h3>
 
-        <p class="py-4 text-primary-lightCyan font-extra-bold font-manrope">
+        <p id="advice" class="py-4 text-primary-lightCyan font-extra-bold font-manrope">
           It is easy to sit up and take notice, what's difficult is getting up and taking action.
         </p>
 
