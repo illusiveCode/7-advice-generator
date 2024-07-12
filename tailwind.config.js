@@ -3,6 +3,15 @@ const tailwindConfig = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      keyframes: {
+        rotate360: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(720deg)" },
+        },
+      },
+      animation: {
+        rotate360: "rotate360 2s linear", // 2s duration for 360 rotation
+      },
       colors: {
         primary: {
           lightCyan: "hsl(193, 38%, 86%)",
