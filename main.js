@@ -11,7 +11,6 @@ const getAdviceData = async () => {
     }
 
     const data = await response.json();
-    console.log(data);
     adviceNumber.textContent = `${data.slip.id}`;
     advice.textContent = `"${data.slip.advice}"`;
   } catch (error) {
@@ -22,7 +21,9 @@ const getAdviceData = async () => {
 const handleClick = () => {
   adviceGenButton.disabled = true;
   adviceGenButton.style.opacity = "15%";
+
   getAdviceData();
+
   setTimeout(() => {
     adviceGenButton.disabled = false;
     adviceGenButton.style.opacity = "100%";
